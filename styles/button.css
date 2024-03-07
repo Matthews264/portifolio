@@ -1,0 +1,95 @@
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+
+:root {
+  --cor-button1: #9290C3;
+  --cor-button2: #535C91;
+}
+
+.button-img {
+  max-width: 30px;
+  max-height: 20px;
+  width: auto;
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  }
+
+.display-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button{
+  position:relative;
+  display:inline-block;
+  margin: 30px;
+  }
+  
+  .button a{
+    justify-content: center;
+    gap: 16px;
+    color:white;
+    font-family:'8BIT WONDER', sans-serif;
+    font-weight:bold;
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration:none;
+    background-color: var(--cor-button1);
+    display: flex;
+    position: relative;
+    padding: 20px 30px;
+    border-radius: 10px;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 var(--cor-button2);
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 var(--cor-button2);
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 var(--cor-button2);
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  .button a:active{
+    top:10px;
+    background-color:var(--cor-button2);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 var(--cor-button2);
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 var(--cor-button2);
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 var(--cor-button2);
+  }
+  
+  .button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+@media (max-width: 1200px) {
+   .button-container {
+     flex-direction: column;
+     margin: 0% 25%;
+   }
+   .button a {
+    font-size: auto;
+   }
+}
